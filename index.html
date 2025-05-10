@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <title>Glamorous Angel</title>
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,700;1,700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    
+<body>
+    <section id="1" class="top">
+        <video autoplay muted loop class="bg">
+            <source src="bgv.mp4" type="video/mp4">
+          </video>
+
+          <nav class="nav">
+            <div class="logo">
+                <a href="#1"><img src="iconw.png"></a>
+              </div>
+          
+              <div class="nav-bar">
+                <li><a href="#2">ABOUT</a></li>
+                <li><a href="#3">SKILLS</a></li>
+                <li><a href="#4">PROJECTS</a></li>
+              </div>
+        </nav>
+
+        <div class="content fade-in">
+            <h1>DOROTHY</h1>
+            <h2>MILES</h2>
+            <p>Glamorous Angel</p>
+        </div>
+    </section>
+
+    <section id="2" class="about">
+        <div class="rot fade-in">
+            <h1>ABOUT</h1>
+        </div>
+        <div class="tor">
+            <p class="fade-in">
+                I’m Dorothy Miles Ang, a 2nd-year Computer Science student with a 
+                growing passion for web development. I'm currently learning the 
+                foundations of front-end and back-end development, and I’m excited 
+                to become a full-stack developer. I enjoy building simple, user-friendly 
+                web projects and constantly aim to improve my skills in both design and 
+                functionality.
+            </p>
+
+            <div class="contact-icons fade-in">
+                <a href="mailto:dmilesang@gmail.com" target="_blank" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/dmilesang/" target="_blank" title="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/glamorousangel" target="_blank" title="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+
+            <img src="me.jpg" alt="Decorative" class="corner-image fade-in" />
+        </div>
+    </section>
+
+    <section id="3" class="skills">
+        <h2 class="fade-in">SKILLS</h2>
+        <div class="skills-container fade-in">
+          <div class="skills-column">
+            <h3>ACQUAINTED</h3>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>Python, Java, C++</li>
+              <li>GitHub</li>
+              <li>Visual Studio Code</li>
+              <li>Basic SQL</li>
+            </ul>
+          </div>
+          <div class="skills-column">
+            <h3>EXPLORING</h3>
+            <ul>
+              <li>React</li>
+              <li>Node.js & Express</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+      
+
+    <section id="4" class="projects">
+
+        <video autoplay muted loop class="bg">
+            <source src="bgv1.mp4" type="video/mp4">
+        </video>
+
+        <div class="projects-content fade-in">
+            <h2>PROJECTS</h2>
+        
+            <!-- Logo Icons -->
+            <div class="logos fade-in">
+                <a href="https://dezatocafe.netlify.app/" target="_blank">
+                    <img src="dezato.png" alt="Logo 1" class="logo1">
+                </a>
+                <a href="https://tatsusdaa.netlify.app/" target="_blank">
+                    <img src="tatsu.png" alt="Logo 2" class="logo2">
+                </a>
+                <a href="https://flaneur.com" target="_blank">
+                    <img src="flaneur.png" alt="Logo 3" class="logo3">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Glamorous Angel &copy; 2025</p>
+    </footer>
+      
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+      
+        const appearOptions = {
+          threshold: 0.2,
+          rootMargin: "0px 0px -100px 0px"
+        };
+      
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              return;
+            } else {
+              entry.target.classList.add('visible');
+              appearOnScroll.unobserve(entry.target);
+            }
+          });
+        }, appearOptions);
+      
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
+        });
+      </script>
+        
+</body>
+</html>
