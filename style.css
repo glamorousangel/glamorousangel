@@ -287,6 +287,16 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.logo4 {
+    width: 90px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo5 {
+    width: 90px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 .logo1:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
@@ -298,6 +308,16 @@
 } 
 
 .logo3:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.logo4:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.logo5:hover {
   transform: scale(1.1);
   filter: brightness(1.2);
 }
